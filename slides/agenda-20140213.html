@@ -82,6 +82,13 @@
   <h2 class="author">Mokoversity.com</h2>
   <h3 class="date">2014/02/13</h3>
 </section>
+<section id="installation" class="slide level1">
+<h1>Installation</h1>
+<ul>
+<li>mongod: daemon (server)</li>
+<li>mongo: shell (client)</li>
+</ul>
+</section>
 <section id="connect-to-a-mongod" class="slide level1">
 <h1>Connect to a mongod</h1>
 <ul>
@@ -98,15 +105,38 @@
 <pre><code>show collections</code></pre>
 <pre><code>exit</code></pre>
 </section>
+<section id="create-a-new-database" class="slide level1">
+<h1>Create a new Database</h1>
+<p>$ mongo test2</p>
+</section>
+<section id="save-a-new-document" class="slide level1">
+<h1>Save a new document</h1>
+<pre><code>db.test.save({name: &#39;hank&#39;})</code></pre>
+</section>
 <section id="query-a-collection" class="slide level1">
 <h1>Query a collection</h1>
 <pre><code>db.test.find()</code></pre>
+<pre><code>db.test.find({name: &#39;hank&#39;})</code></pre>
+<pre><code>db.test.findOne()</code></pre>
+</section>
+<section id="remove-a-document" class="slide level1">
+<h1>Remove a document</h1>
+<pre><code>db.test.remove()</code></pre>
+<pre><code>db.test.remove({name: &#39;hank&#39;})</code></pre>
 </section>
 <section id="create-vcard" class="slide level1">
 <h1>Create <em>vcard</em></h1>
-<pre><code>{ &quot;name&quot; : &quot;Peter Wang&quot;, &quot;tel&quot; : &quot;123456&quot;, &quot;_id&quot; : ObjectId(&quot;52e369e86f8e361a0978eef5&quot;), &quot;__v&quot; : 0 }
-{ &quot;nickname&quot; : &quot;jollen&quot;, &quot;name&quot; : &quot;123456&quot;, &quot;tel&quot; : &quot;Jollen Chen&quot;, &quot;_id&quot; : ObjectId(&quot;52e37369c8328ac709c83376&quot;), &quot;__v&quot; : 0 }
-{ &quot;nickname&quot; : &quot;john&quot;, &quot;name&quot; : &quot;123456&quot;, &quot;tel&quot; : &quot;John Li&quot;, &quot;_id&quot; : ObjectId(&quot;52e37496c8328ac709c83377&quot;), &quot;__v&quot; : 0 }</code></pre>
+<pre><code>{
+    &quot;nickname&quot;: &quot;peter&quot;,
+    &quot;name&quot;: &quot;Peter Wang&quot;,
+    &quot;tel&quot;: &quot;123456&quot;,
+    &quot;_id&quot;: ObjectId(&quot;52e369e86f8e361a0978eef5&quot;)
+}, {
+    &quot;nickname&quot;: &quot;jollen&quot;,
+    &quot;name&quot;: &quot;123456&quot;,
+    &quot;tel&quot;: &quot;Jollen Chen&quot;,
+    &quot;_id&quot;: ObjectId(&quot;52e37369c8328ac709c83376&quot;)
+}</code></pre>
 </section>
 <section id="create-a-new-collection" class="slide level1">
 <h1>Create a new Collection</h1>
