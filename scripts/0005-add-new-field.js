@@ -1,3 +1,5 @@
+// 0005
+
 {
     var db = connect('localhost/test');
 
@@ -6,5 +8,5 @@
         db.vipData.save(data);
     });
 
-    print('0005-add-field finished');
+    print('0005-add-new-field finished');
 }

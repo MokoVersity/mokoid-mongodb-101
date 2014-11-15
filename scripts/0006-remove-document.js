@@ -1,3 +1,5 @@
+// 0006
+
 {
     var db = connect('localhost/test');
 

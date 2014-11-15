@@ -1,8 +1,7 @@
 var mongoose = require('mongoose');
+var db = mongoose.connection;
 
 mongoose.connect('mongodb://localhost/vcard9');
-
-var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {

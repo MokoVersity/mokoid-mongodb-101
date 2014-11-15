@@ -7010,7 +7010,7 @@
   }
 ];
 
-  var db = connect('localhost/vcard');
+  var db = connect('localhost/test');
 
   db.users.save(users);
 
